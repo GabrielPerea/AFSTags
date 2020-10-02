@@ -15,6 +15,7 @@ function afs4kids_scripts() {
 
 	// Load page specific CSS & JS for tagtree page only if we're actually on a tagtree page
 	if (is_page_template('tagtree.php')) {
+		wp_enqueue_style("bootstrap4", "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"); // Load Bootstrap css
 		wp_enqueue_style('tagtree-css', get_stylesheet_directory_uri() . '/css/tagtree.css');
 		wp_enqueue_script('tagtree-js', get_stylesheet_directory_uri() . '/js/tagtree.js');
 	};
