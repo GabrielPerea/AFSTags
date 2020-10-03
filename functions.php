@@ -21,13 +21,13 @@ function afs4kids_scripts() {
 			'tagtree-css', 
 			get_stylesheet_directory_uri() . '/css/tagtree.css', 
 			array(), 
-			date('ymd-Gis', filemtime(get_stylesheet_directory_uri() . '/css/tagtree.css'))
+			date('ymd-Gis', filemtime(get_stylesheet_directory() . '/css/tagtree.css'))
 		);
 		wp_enqueue_script(
 			'tagtree-js', 
 			get_stylesheet_directory_uri() . '/js/tagtree.js', 
 			array(), 
-			date('ymd-Gis', filemtime(get_stylesheet_directory_uri() . '/js/tagtree.js')), 
+			date('ymd-Gis', filemtime(get_stylesheet_directory() . '/js/tagtree.js')), 
 			true
 		);
 	};

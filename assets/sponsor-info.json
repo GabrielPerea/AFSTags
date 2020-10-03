@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Starbucks",
+        "logo": "starbucks.jpg",
+        "link": "https://en.wikipedia.org/wiki/Starbucks"
+    },
+    {
+        "name": "Route 66",
+        "logo": "route66.jpg",
+        "link": "https://en.wikipedia.org/wiki/U.S._Route_66"
+    }
+]

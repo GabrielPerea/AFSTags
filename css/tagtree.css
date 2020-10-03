@@ -1,25 +1,162 @@
-.tt-tag {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    height: 35px;
-    border: 1px solid red;
-    border-right: none; 
-    width: 100px;
+#button-row {
+    position: relative;
 }
 
-.tt-tag:after {
-    content: "";
+.tt-button-label {
+    margin-top: 0.5em;
+    color: white;
+}
+
+.tt-tag-main {
+    display: none;
     position: absolute;
-    top: 4px;
-    right: -13px;
-    width: 25px;
-    height: 25px;
-    border: 1px solid red;
-    border-left: none;
-    border-bottom: none;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
+    top: -50%;
+    left: 20%;
+
+    /* Note: Background size should be element size */
+    height: 300px;
+    border: none;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    z-index: 9999;
+}
+
+@media only screen and (max-width: 768px) {
+    .tt-tag-main {
+        top: -50%;
+        left: 0;
+        height: 300px;
+        border: none;
+        width: 600px;
+        background-size: 600px 300px;
+    }
+}
+
+.tt-tag-text {
+    text-align: left;
+    padding-left: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.5rem;
+    width: 450px;
+    text-justify: left;
+}
+
+.tt-tag-text p {
+    margin: 0;
+    margin-bottom: -5px;
+}
+
+.tt-tag-name {
+    font-size: 4rem;
+    margin-bottom: -10px;
+}
+
+.tt-tag-age {
+    font-size: 2rem;
+}
+
+.tt-tag-text .tt-tag-toy {
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+}
+
+/* Parent mentioned for specificity */
+.tt-tag-text .btn-afsOrange {
+    background-color: #db680c;
+    color: #FFFFFF;
+}
+
+.tt-tag .tt-tag-buttons-small {
+    display: none;
+}
+
+@media only screen and (max-width: 599px) {
+    .tt-tag-main {
+        top: -50%;
+        left: 0;
+        height: 250px;
+        border: none;
+        width: 350px;
+        background-size: 350px 250px;
+    }
+
+    .tt-tag .tt-tag-text {
+        padding-left: 45px;
+        font-size: 1rem;
+        width: 305px;
+    }
+
+    .tt-tag .tt-tag-name {
+        font-size: 2rem;
+        margin-bottom: -10px;
+    }
+
+    .tt-tag .tt-tag-age {
+        font-size: 1rem;
+        margin-bottom: 0.5em;
+    }
+
+    .tt-tag .tt-tag-text .tt-tag-toy {
+        font-size: 1.25rem;
+        line-height: 1em;
+        margin-bottom: 5px;
+    }
+
+    .tt-tag .tt-tag-buttons {
+        display: none;
+    }
+
+    /* Extra specificity to defeat beaverbuilder's button media queries */
+    .tt-tag .tt-tag-text .tt-tag-buttons-small,
+    .tt-tag-buttons-small button.btn-sm {
+        text-justify: center;
+        display: block;
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+    }
+
+    .tt-tag .tt-tag-text .tt-tag-buttons-small a.btn {
+        margin-bottom: 1em;
+    }
+}
+
+.btn-afsOrange {
+    background-color: #db680c;
+    color: #FFFFFF;
+}
+
+.tt-or {
+    margin: 0;
+    margin-top: -0.75em;
+}
+
+/* SPONSOR SECTION */
+
+.tt-sponsor-col {
+    
+}
+
+.tt-sponsor-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f5f0;
+}
+
+.tt-sponsor-image {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
 }
