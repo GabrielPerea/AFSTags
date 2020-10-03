@@ -1,4 +1,25 @@
-.tt-fit-image {
-    width: 100%;
-    object-fit: contain;
+.tt-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 35px;
+    border: 1px solid red;
+    border-right: none; 
+    width: 100px;
+}
+
+.tt-tag:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -13px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid red;
+    border-left: none;
+    border-bottom: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
 }

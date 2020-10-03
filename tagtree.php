@@ -1,9 +1,48 @@
 <?php /* Template Name: TagTree */ ?>
 <?php get_header(); ?>
 
-<div class="container">
+<script>
+// Add assets url path to global scope for our JS to use for loading files
+window.tagTreeAssetsURL = "<?php print content_url('uploads/tag-tree-assets/'); ?>";
+</script>
+
+<style>
+    .tt-tag {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 40%;
+
+    height: 150px;
+    border: none;
+    width: 300px;
+
+    background: url(<?php print content_url('uploads/tag-tree-assets/images/tagimage.png'); ?>);
+    background-repeat: no-repeat;
+    background-size: 300px 150px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.tt-tag-text {
+    text-align: left;
+    display: block;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
+.tt-tag-text p {
+    margin: 0;
+}
+</style>
+
+<div class="container mt-2" style="position: relative;">
     <div class="row">
-        <div class="col-12 col-md-6 order-md-1 order-2" >
+        <div class="col-12 col-lg-6 order-lg-1 order-2 text-center" >
             <picture>
                 <img class="img-fluid rounded mx-auto" style="object-fit:cover;max-height:274px;" sizes="(max-width: 1400px) 100vw, 1400px" srcset="<?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_200.jpg 200w,
                             <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_368.jpg 368w,
@@ -23,29 +62,29 @@
                 src="<?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1400.jpg" alt="Excited gift recipient">
             </picture>
         </div>
-        <div class="col-12 col-md-6 order-md-2 order-1">
+        <div class="col-12 col-lg-6 order-lg-2 order-1">
             <div class="jumbotron">
                 <h1 class="display-4 text-uppercase">Foster Joy</h1>
                 <p class="lead">A virtual gift drive to ensure foster youth receive a gift this holiday season.</p>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-12">
             <div class="card">
                 <h5 class="card-header">Choose an age group to donate</h5>
                 <div class="card-body row">
-                    <div class="col-4 text-center">
+                    <div class="col-4 text-center" id="age-group-button-1">
                         <button class="mx-auto">
                             <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-stars.jpg'); ?>" alt="Present for 0-6">
                         </button class="button">
                     </div>
-                    <div class="col-4 text-center">
+                    <div class="col-4 text-center" id="age-group-button-2">
                         <button class="mx-auto">
                             <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-dots.jpg'); ?>" alt="Present for 7-12">
                         </button class="button">
                     </div>
-                    <div class="col-4 text-center">
+                    <div class="col-4 text-center" id="age-group-button-3">
                         <button class="mx-auto">
                             <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-plain.jpg'); ?>" alt="Present for 13-18">
                         </button class="button">
