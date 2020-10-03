@@ -47,7 +47,8 @@ async function tagTreeMain() {
     f: "girl",
   };
 
-  const confirmationBaseULR = window.siteURL + "/tag-tree-confirmation-page/"
+  const confirmationBaseULR = window.siteURL + "/tag-tree-confirmation-page/";
+  const donationLink = "https://app.etapestry.com/hosted/AlternativeFamilyServices/OnlineDonation.html"
 
   // Return random number between 0 and n
   function rand(n) {
@@ -118,13 +119,35 @@ async function tagTreeMain() {
     tagText.classList.add("tt-tag");
     tagText.classList.add("tt-tag-text");
     tagText.innerHTML = `
-        <p class="tt-tag tt-tag-name">${tags[group].name} ${tags[group].initial}.</p>
+        <p class="tt-tag tt-tag-name">
+          ${tags[group].name} ${tags[group].initial}.
+        </p>
         <p class="tt-tag tt-tag-age">Age ${tags[group].age}</p>
         <p class="tt-tag tt-tag-toy">Wants ${tags[group].toy}</p>
         <div class="tt-tag tt-tag-buttons"> 
-            <a class="tt-tag btn btn-danger btn-afsOrange" href="${confirmationBaseULR}?kidname=${tags[group].name}+${tags[group].initial}&toy=${encodeURIComponent(tags[group].toy)}&age=${tags[group].age}">Buy Gift</a>
-            <button class="tt-tag btn btn-danger btn-afsOrange">Donate Instead</button>
+            <a 
+              class="tt-tag btn btn-danger btn-afsOrange" 
+              href="${confirmationBaseULR}?kidname=${tags[group].name}+${
+      tags[group].initial
+    }&toy=${encodeURIComponent(tags[group].toy)}&age=${tags[group].age}"
+            >
+              Buy Gift
+            </a>
+            <a class="tt-tag btn btn-danger btn-afsOrange" href="${donationLink}" rel="noopener noreferrer">Donate Money Instead</a>
             <button class="tt-tag btn btn-danger btn-afsOrange re-roll-button" data-group="${group}">New tag</button>
+        </div>
+        
+        <div class="tt-tag tt-tag-buttons-small"> 
+            <a 
+              class="tt-tag btn btn-sm btn-danger btn-afsOrange" 
+              href="${confirmationBaseULR}?kidname=${tags[group].name}+${
+      tags[group].initial
+    }&toy=${encodeURIComponent(tags[group].toy)}&age=${tags[group].age}"
+            >
+              Buy Gift
+            </a>
+            <a class="tt-tag btn btn-sm btn-danger btn-afsOrange" href="${donationLink}" rel="noopener noreferrer">Donate Money Instead</a>
+            <button class="tt-tag btn btn-sm btn-danger btn-afsOrange re-roll-button" data-group="${group}">New tag</button>
         </div>
     `;
 
@@ -134,31 +157,31 @@ async function tagTreeMain() {
   }
 
   // Add one of the three tags to the DOM
-  function addTagToDOM(num, noClickOff=false) {
+  function addTagToDOM(num, noClickOff = false) {
     // Remove any existing tag from DOM
     if (currentTag) currentTag.remove();
-      currentTag = tagElementsActual[num];
-      buttonRow.append(tagElementsActual[num]);
-      // Pass true to second argument to prevent setting tagAddSwitch to true
-      // You'll want to do this if regenerating without clicking off
-      tagAddSwitch = noClickOff ? false : true;
+    currentTag = tagElementsActual[num];
+    buttonRow.append(tagElementsActual[num]);
+    // Pass true to second argument to prevent setting tagAddSwitch to true
+    // You'll want to do this if regenerating without clicking off
+    tagAddSwitch = noClickOff ? false : true;
     // Set event listener for re-rolling the tag in place
     tagElementsActual[num]
-    .getElementsByClassName("re-roll-button")[0]
-    .addEventListener("click", (ev) => {
-      tagElementsActual[num].remove();
-      reGenerateTagData();
-      tagElementsActual[num] = generateTag(num);
-      addTagToDOM(num, true)
-    });
-  };
+      .getElementsByClassName("re-roll-button")[0]
+      .addEventListener("click", (ev) => {
+        tagElementsActual[num].remove();
+        reGenerateTagData();
+        tagElementsActual[num] = generateTag(num);
+        addTagToDOM(num, true);
+      });
+  }
 
   for (let [htmlTag, number] of tagButtonHandles) {
     // Generate new tag & add it to the tag array
     tagElementsActual[number] = generateTag(number);
     // Create trigger for adding tag to dom when corresponding button is clicked
     htmlTag.addEventListener("click", () => {
-      addTagToDOM(number);      
+      addTagToDOM(number);
     });
   }
 
