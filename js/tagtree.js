@@ -2,17 +2,35 @@ console.log("Running tag tree script.");
 async function tagTreeMain() {
   console.log("Executing main script");
   // Setup hooks for our 3 age group buttons:
-  const tag1 = document.getElementById("age-group-button-1");
-  const tag2 = document.getElementById("age-group-button-2");
-  const tag3 = document.getElementById("age-group-button-3");
-  const tagElements = [
-    [tag1, 1],
-    [tag2, 2],
-    [tag3, 3],
+  const buttonContainer1 = document.getElementById("age-group-container-1");
+  const buttonContainer2 = document.getElementById("age-group-container-2");
+  const buttonContainer3 = document.getElementById("age-group-container-3");
+  const buttonContainerElementHandles = [
+    [buttonContainer1, 1],
+    [buttonContainer2, 2],
+    [buttonContainer3, 3],
+  ];
+  // Hold all actual tag elements
+  const tagElementsActual = [];
+  // Track currently displayed tag
+  window.currentTag = null;
+  // Our click-off handler will always trigger after our add-tag handler due to bubbling
+  // So we set this to true every time we add a tag, and then click-off will abort (an then reset it to false)
+  window.tagAddSwitch = false;
+
+  const buttonRow = document.getElementById("button-row");
+  const button1 = document.getElementById("age-group-button-1");
+  const button2 = document.getElementById("age-group-button-2");
+  const button3 = document.getElementById("age-group-button-3");
+
+  const tagButtonHandles = [
+    [button1, 1],
+    [button2, 2],
+    [button3, 3],
   ];
 
   // See tagtree.php for declaration of tagTreeAssetsURL
-  console.log("Test version 024");
+  console.log("Test version 028");
 
   const rawProfiles = await fetch(tagTreeAssetsURL + "profiles.json");
   const profilesList = await rawProfiles.json();
@@ -28,6 +46,8 @@ async function tagTreeMain() {
     m: "boy",
     f: "girl",
   };
+
+  const confirmationBaseULR = window.siteURL + "/tag-tree-confirmation-page/"
 
   // Return random number between 0 and n
   function rand(n) {
@@ -48,32 +68,39 @@ async function tagTreeMain() {
     3: "teen",
   };
 
-  // For each of 3 age groups
-  for (let i = 1; i < 4; i++) {
-    // Get subset of all profiles based on age group
-    let profileAgeSlice = profilesList[AGEGROUPS[i]];
-    // Select random entry from age group
-    let randomProfile = profileAgeSlice[rand(profileAgeSlice.length - 1)];
+  function reGenerateTagData() {
+    // For each of 3 age groups
+    for (let i = 1; i < 4; i++) {
+      // Get subset of all profiles based on age group
+      let profileAgeSlice = profilesList[AGEGROUPS[i]];
+      // Select random entry from age group
+      let randomProfile = profileAgeSlice[rand(profileAgeSlice.length - 1)];
 
-    tags[i].toy = randomProfile[2];
-    tags[i].age = randomProfile[0];
+      tags[i].toy = randomProfile[2];
+      tags[i].age = randomProfile[0];
 
-    let gender = randomProfile[1];
-    if (gender !== GENDERS.b && gender !== GENDERS.g) gender = GENDERS[rand(1)];
-    tags[i].gender = gender;
+      let gender = randomProfile[1];
+      if (gender !== GENDERS.b && gender !== GENDERS.g)
+        gender = GENDERS[rand(1)];
+      tags[i].gender = gender;
 
-    // Pick names at random until one of the proper gender is found
-    while (true) {
-      let tempName = namesList[rand(namesList.length - 1)];
-      if (GENDERS[tempName[1]] === gender) {
-        tags[i].name = tempName[0];
-        break;
+      // Pick names at random until one of the proper gender is found
+      while (true) {
+        let tempName = namesList[rand(namesList.length - 1)];
+        if (GENDERS[tempName[1]] === gender) {
+          tags[i].name = tempName[0];
+          break;
+        }
       }
-    }
 
-    // Pick initial for surname
-    tags[i].initial = randChar().toUpperCase();
+      // Pick initial for surname
+      tags[i].initial = randChar().toUpperCase();
+    }
   }
+
+  // Roll initial tags
+  // They will be re-rolled every time we remove a tag from the DOM
+  reGenerateTagData();
 
   function generateTag(group) {
     let ageGroup = "";
@@ -84,17 +111,20 @@ async function tagTreeMain() {
 
     let newTagElement = document.createElement("div");
     newTagElement.classList.add("tt-tag");
+    newTagElement.classList.add("tt-tag-main");
+    newTagElement.dataset.group = group;
 
     let tagText = document.createElement("div");
+    tagText.classList.add("tt-tag");
     tagText.classList.add("tt-tag-text");
     tagText.innerHTML = `
-        <p>${tags[group].name} ${tags[group].initial}.</p>
-        <p>Age ${tags[group].age}</p>
-        <p>Wants ${tags[group].toy}</p>
-        <div> 
-            <button class="btn btn-sm btn-danger">Buy Gift</button>
-            <button class="btn btn-sm btn-danger">Donate Instead</button>
-            <button class="btn btn-sm btn-danger">New tag</button>
+        <p class="tt-tag tt-tag-name">${tags[group].name} ${tags[group].initial}.</p>
+        <p class="tt-tag tt-tag-age">Age ${tags[group].age}</p>
+        <p class="tt-tag tt-tag-toy">Wants ${tags[group].toy}</p>
+        <div class="tt-tag tt-tag-buttons"> 
+            <a class="tt-tag btn btn-danger btn-afsOrange" href="${confirmationBaseULR}?kidname=${tags[group].name}+${tags[group].initial}&toy=${encodeURIComponent(tags[group].toy)}&age=${tags[group].age}">Buy Gift</a>
+            <button class="tt-tag btn btn-danger btn-afsOrange">Donate Instead</button>
+            <button class="tt-tag btn btn-danger btn-afsOrange re-roll-button" data-group="${group}">New tag</button>
         </div>
     `;
 
@@ -103,8 +133,55 @@ async function tagTreeMain() {
     return newTagElement;
   }
 
-  for ([htmlTag, number] of tagElements) {
-    htmlTag.appendChild(generateTag(number));
+  // Add one of the three tags to the DOM
+  function addTagToDOM(num, noClickOff=false) {
+    // Remove any existing tag from DOM
+    if (currentTag) currentTag.remove();
+      currentTag = tagElementsActual[num];
+      buttonRow.append(tagElementsActual[num]);
+      // Pass true to second argument to prevent setting tagAddSwitch to true
+      // You'll want to do this if regenerating without clicking off
+      tagAddSwitch = noClickOff ? false : true;
+    // Set event listener for re-rolling the tag in place
+    tagElementsActual[num]
+    .getElementsByClassName("re-roll-button")[0]
+    .addEventListener("click", (ev) => {
+      tagElementsActual[num].remove();
+      reGenerateTagData();
+      tagElementsActual[num] = generateTag(num);
+      addTagToDOM(num, true)
+    });
+  };
+
+  for (let [htmlTag, number] of tagButtonHandles) {
+    // Generate new tag & add it to the tag array
+    tagElementsActual[number] = generateTag(number);
+    // Create trigger for adding tag to dom when corresponding button is clicked
+    htmlTag.addEventListener("click", () => {
+      addTagToDOM(number);      
+    });
+  }
+
+  // Listener for "click-off" of tags
+  document.addEventListener("click", (ev) => {
+    window.tagElementsActual = tagElementsActual; // just for testing
+    if (ev && ev.target && !isTag(ev.target)) {
+      if (!currentTag || tagAddSwitch) {
+        tagAddSwitch = false;
+        return;
+      }
+      let tagNum = Number(currentTag.dataset.group);
+      currentTag.remove();
+      currentTag = null;
+      reGenerateTagData();
+      tagElementsActual[tagNum] = generateTag(tagNum);
+    }
+  });
+
+  function isTag(elem) {
+    if (!elem || !elem.classList) return false;
+    if (elem.classList.contains("tt-tag")) return true;
+    return false;
   }
 }
 

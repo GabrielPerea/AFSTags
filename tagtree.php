@@ -4,39 +4,75 @@
 <script>
 // Add assets url path to global scope for our JS to use for loading files
 window.tagTreeAssetsURL = "<?php print content_url('uploads/tag-tree-assets/'); ?>";
+window.siteURL = "<?php print get_site_url() ?>"
 </script>
 
 <style>
-    .tt-tag {
+
+    #button-row {
+        position: relative;
+    }
+
+    .tt-tag-main {
     display: none;
     position: absolute;
-    top: -20px;
-    left: 40%;
-
-    height: 150px;
+    top: -50%;
+    left: 20%;
+    
+    /* Note: Background size should be element size */
+    height: 300px;
     border: none;
-    width: 300px;
+    width: 600px;
 
     background: url(<?php print content_url('uploads/tag-tree-assets/images/tagimage.png'); ?>);
     background-repeat: no-repeat;
-    background-size: 300px 150px;
+    background-size: 600px 300px;
     background-position: center;
     display: flex;
     justify-content: center;
     align-content: center;
     padding-top: 5px;
     padding-bottom: 5px;
+
+    z-index: 10;
 }
 
 .tt-tag-text {
     text-align: left;
-    display: block;
-    margin-left: 30px;
-    padding-top: 20px;
+    padding-left: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.5rem;
+    width: 450px;
+    text-justify: left;
 }
 
 .tt-tag-text p {
     margin: 0;
+    margin-bottom: -5px;
+}
+
+.tt-tag-name {
+    font-size: 4rem;
+    margin-bottom: -10px;
+}
+
+.tt-tag-age {
+    font-size: 2rem;
+}
+
+.tt-tag-text .tt-tag-toy {
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+}
+
+/* Parent mentioned for specificity */
+.tt-tag-text .btn-afsOrange {
+    background-color: #db680c;
+    color: #FFFFFF;
 }
 </style>
 
@@ -73,19 +109,19 @@ window.tagTreeAssetsURL = "<?php print content_url('uploads/tag-tree-assets/'); 
         <div class="col-12">
             <div class="card">
                 <h5 class="card-header">Choose an age group to donate</h5>
-                <div class="card-body row">
-                    <div class="col-4 text-center" id="age-group-button-1">
-                        <button class="mx-auto">
+                <div class="card-body row" id="button-row">
+                    <div class="col-4 text-center" id="age-group-container-1">
+                        <button id="age-group-button-1" class="mx-auto">
                             <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-stars.jpg'); ?>" alt="Present for 0-6">
                         </button class="button">
                     </div>
-                    <div class="col-4 text-center" id="age-group-button-2">
-                        <button class="mx-auto">
+                    <div class="col-4 text-center" id="age-group-container-2">
+                        <button id="age-group-button-2" class="mx-auto">
                             <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-dots.jpg'); ?>" alt="Present for 7-12">
                         </button class="button">
                     </div>
-                    <div class="col-4 text-center" id="age-group-button-3">
-                        <button class="mx-auto">
+                    <div class="col-4 text-center" id="age-group-container-3">
+                        <button id="age-group-button-3" class="mx-auto">
                             <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-plain.jpg'); ?>" alt="Present for 13-18">
                         </button class="button">
                     </div>
