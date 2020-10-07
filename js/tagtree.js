@@ -1,6 +1,4 @@
-console.log("Running tag tree script.");
 async function tagTreeMain() {
-  console.log("Executing main script");
   // Setup hooks for our 3 age group buttons:
   const buttonContainer1 = document.getElementById("age-group-container-1");
   const buttonContainer2 = document.getElementById("age-group-container-2");
@@ -30,8 +28,6 @@ async function tagTreeMain() {
   ];
 
   // See tagtree.php for declaration of tagTreeAssetsURL
-  console.log("Test version 028");
-
   const rawProfiles = await fetch(tagTreeAssetsURL + "profiles.json");
   const profilesList = await rawProfiles.json();
 
@@ -48,7 +44,8 @@ async function tagTreeMain() {
   };
 
   const confirmationBaseULR = window.siteURL + "/tag-tree-confirmation-page/";
-  const donationLink = "https://app.etapestry.com/hosted/AlternativeFamilyServices/OnlineDonation.html"
+  const donationLink =
+    "https://app.etapestry.com/onlineforms/AlternativeFamilyServices/fosterjoy.html";
 
   // Return random number between 0 and n
   function rand(n) {
@@ -167,12 +164,14 @@ async function tagTreeMain() {
     tagAddSwitch = noClickOff ? false : true;
     // Set event listener for re-rolling the tag in place
     tagElementsActual[num]
-      .getElementsByClassName("re-roll-button")[0]
-      .addEventListener("click", (ev) => {
-        tagElementsActual[num].remove();
-        reGenerateTagData();
-        tagElementsActual[num] = generateTag(num);
-        addTagToDOM(num, true);
+      .getElementsByClassName("re-roll-button")
+      .forEach((elem) => {
+        elem.addEventListener("click", (ev) => {
+          tagElementsActual[num].remove();
+          reGenerateTagData();
+          tagElementsActual[num] = generateTag(num);
+          addTagToDOM(num, true);
+        });
       });
   }
 

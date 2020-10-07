@@ -30,10 +30,10 @@
     .tt-tag-main {
         top: -50%;
         left: 0;
-        height: 300px;
+        height: 300px !important;
         border: none;
-        width: 600px;
-        background-size: 600px 300px;
+        width: 600px !important;
+        background-size: 600px 300px !important;
     }
 }
 
@@ -81,16 +81,16 @@
 
 @media only screen and (max-width: 599px) {
     .tt-tag-main {
-        top: -50%;
-        left: 0;
-        height: 250px;
+        top: -50%  !important;
+        left: 0  !important;
+        height: 200px !important;
         border: none;
-        width: 350px;
-        background-size: 350px 250px;
+        width: 350px !important;
+        background-size: 350px 200px !important;
     }
 
     .tt-tag .tt-tag-text {
-        padding-left: 45px;
+        padding-left: 75px;
         font-size: 1rem;
         width: 305px;
     }
@@ -126,6 +126,23 @@
 
     .tt-tag .tt-tag-text .tt-tag-buttons-small a.btn {
         margin-bottom: 1em;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .tt-tag-main {
+        top: -50%  !important;
+        left: 0  !important;
+        height: 200px !important;
+        border: none;
+        width: 310px !important;
+        background-size: 310px 200px !important;
+    }
+
+    .tt-tag .tt-tag-text {
+        padding-left: 70px;
+        font-size: 0.8rem;
+        width: 305px;
     }
 }
 
