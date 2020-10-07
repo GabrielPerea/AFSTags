@@ -130,7 +130,7 @@
 }
 
 .btn-afsOrange {
-    background-color: #db680c;
+    background-color: #db680c !important;
     color: #FFFFFF;
 }
 
@@ -142,7 +142,8 @@
 /* SPONSOR SECTION */
 
 .tt-sponsor-col {
-    
+    min-width: 280px !important;
+    min-height: 280px !important;
 }
 
 .tt-sponsor-box {

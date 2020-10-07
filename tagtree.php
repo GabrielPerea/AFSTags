@@ -130,11 +130,11 @@ define('WP_DEBUG_DISPLAY', true); ?>
     </div>
 
     <!-- Sponsors -->
-    <div id="sponsors-row" class="row">
+    <div id="sponsors-row" class="row mb-4">
         <div class="col-12">
             <div class="card">
                 <h4 class="card-header text-center">Thank you to our corporate and organizational partners!</h4>
-                <div class="card-body row">
+                <div class="card-body row justify-content-center"> 
                     <?php
                     // We're going to generate the sponsor box dynamically with php and then just insert them all 
                     // We'll use a JSON file to hold the info (see "/wp-content/uploads/tag-tree-assets/sponsor-info.json")
@@ -153,7 +153,7 @@ define('WP_DEBUG_DISPLAY', true); ?>
                         $sponsorLink = $sponsors[$i]['link'];
 
 
-                        print "<div class='col-2 col-md-4 tt-sponsor-col'>";
+                        print "<div class='col-12 col-md-4 tt-sponsor-col mb-3'>";
                         print   "<a href='$sponsorLink' rel='noopener noreferrer' target='__blank'>";
                         print       "<div class='tt-sponsor-box'>";
                         print           "<img src='$sponsorImageLink' alt='$sponsorName' class='tt-sponsor-image'>";
