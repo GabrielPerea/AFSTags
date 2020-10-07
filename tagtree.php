@@ -119,10 +119,10 @@ define('WP_DEBUG_DISPLAY', true); ?>
     <div class="row mb-5">
         <div class="col-12">
             <div class="card">
-                <h5 class="card-header text-center">Make a simple monetary donation</h5>
+                <div class="h3 card-header text-center"><strong>Make a monetary donation</strong></div>
                 <div class="card-body row text-center">
                     <div class="col-12 text-center">
-                        <a class="btn btn-danger btn-afsOrange" href="https://app.etapestry.com/onlineforms/AlternativeFamilyServices/fosterjoy.html" rel="noopener noreferrer">Donate</a>
+                        <a class="btn btn-lg btn-danger btn-afsOrange" href="https://app.etapestry.com/onlineforms/AlternativeFamilyServices/fosterjoy.html" rel="noopener noreferrer">Donate</a>
                     </div>
                 </div>
             </div>
