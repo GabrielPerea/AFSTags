@@ -130,7 +130,7 @@ async function tagTreeMain() {
             >
               Buy Gift
             </a>
-            <a class="tt-tag btn btn-danger btn-afsOrange" href="${donationLink}" rel="noopener noreferrer">Donate Money Instead</a>
+            <a class="tt-tag btn btn-danger btn-afsOrange" href="${donationLink}" rel="noopener noreferrer">Donate Money for Gift</a>
             <button class="tt-tag btn btn-danger btn-afsOrange re-roll-button" data-group="${group}">New tag</button>
         </div>
         
@@ -143,7 +143,7 @@ async function tagTreeMain() {
             >
               Buy Gift
             </a>
-            <a class="tt-tag btn btn-sm btn-danger btn-afsOrange" href="${donationLink}" rel="noopener noreferrer">Donate Money Instead</a>
+            <a class="tt-tag btn btn-sm btn-danger btn-afsOrange" href="${donationLink}" rel="noopener noreferrer">Donate Money for Gift</a>
             <button class="tt-tag btn btn-sm btn-danger btn-afsOrange re-roll-button" data-group="${group}">New tag</button>
         </div>
     `;

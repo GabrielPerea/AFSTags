@@ -81,32 +81,49 @@ define('WP_DEBUG_DISPLAY', true); ?>
                 </div>
                 <div class="card-body row">
                     <div class="col-12">
-                        <h4>Decide</h4>
-                        <p>Choose a gift and then decide whether you'd like to buy it yourself, or donate money and have a caseworker purchase and deliver the gift for you.</p>
-                    </div>
-                    <div class="col-12">
-                        <h4>Choosing a gift</h4>
+                        <h2>Foster Joy Virtual Gift Drive</h2>
                         <ul>
-                            <li>Chose what age foster youth you'd like to purchase a gift for.</li>
-                            <li>Click on the image of the present in your chosen age group.</li>
-                            <li>A tag with a foster youth's wish will pop up. If you'd like to select a different tag, click "new tag" or simply click anywhere outside the tag to remove it, and then select another.</li>
+                            <li>There is no limit to how many tags you can fulfill.</li>
+                            <li>Please feel free to share the link to the Foster Joy Virtual Gift Drive for foster youth with your network and on social media.</li>
+                            <li>Individuals, community organizations (churches, community groups) and businesses can participate in Foster Joy. Just share this webpage
+                                with your network!</li>
+                            <li>Questions can be emailed to <a href="mailto:info@afs4kids.org" target="_blank">info@afs4kids.org</a>.</li>
                         </ul>
-                        <h5>Making a donation</h5>
+                        <h3>Choosing a Gift</h3>
                         <ul>
-                            <li>After choosing your tag, click the included "Donate" button to make a tax deductible financial contribution for the child on your tag.</li>
+                            <li>Choose what age foster youth you would like to purchase a gift for.</li>
+                            <li>Click on the image of the present in your chosen age group.</li>
+                            <li>A tag with a foster youth's wish will pop-up. If you'd like to select a different tag, click "new tag" or simply click anywhere outside
+                                the tag and select another. Hitting the back-arrow will also start the tag search over.</li>
+                            <li>When you see a tag with a youth’s wish you would like to fulfil, select one of the following buttons on the tag:</li>
+                        </ul>
+                        <h4>Donate Money for Gift</h4>
+                        <ul>
+                            <li>On the tag, click the "Donate Money for Gift" button to make a tax-deductible contribution for the youth on your tag. You will be redirected
+                                to a secure donation page.</li>
                             <li>Enter the youth's name in the comments section of the donation page and a caseworker will purchase and deliver the gift for you.</li>
                             <li>You will receive a donation receipt.</li>
                         </ul>
-                        <h5>Buying the gift yourself</h5>
+                        <h4>Buy Gift</h4>
                         <ul>
-                            <li>After choosing your tag, click "Buy Gift".</li>
-                            <li>You will be redirected to a page where you can enter your information. After entering your information, you will receive a confirmation email with instructions on where to send your gift.</li>
+                            <li>On the tag, click "Buy Gift."</li>
+                            <li>You will be redirected to a page where you can enter your information.</li>
+                            <li>After entering your information, you will receive a confirmation email with the youth’s gift wish. You may choose to purchase the gift
+                                or gift card from any online retailer and have it shipped to:
+                                <p class="blockquote lead font-weight-bold my-2">AFS Development Department, 401 Roland Way #150, Oakland, CA 94621</p>
+                            </li>
+                            <li>AFS caseworkers will deliver gifts to clients.</li>
+                            <li>If purchasing an online gift card, it can be sent to:
+                                <a href="mailto:info@afs4kids.org" target="_blank">info@afs4kids.org</a>.
+                                Put the youth’ s name from the tag as the recipient of the gift card. This email is secure and monitored daily.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <!-- OR -->
     <div class="row">
@@ -119,7 +136,7 @@ define('WP_DEBUG_DISPLAY', true); ?>
     <div class="row mb-5">
         <div class="col-12">
             <div class="card">
-                <div class="h3 card-header text-center"><strong>Make a monetary donation</strong></div>
+                <div class="h4 card-header text-center"><strong>Donate to the AFS Holiday Fund and AFS caseworkers will purchase and deliver gifts for youth in need of a gift.</strong></div>
                 <div class="card-body row text-center">
                     <div class="col-12 text-center">
                         <a class="btn btn-lg btn-danger btn-afsOrange" href="https://app.etapestry.com/onlineforms/AlternativeFamilyServices/fosterjoy.html" rel="noopener noreferrer">Donate</a>
@@ -134,7 +151,7 @@ define('WP_DEBUG_DISPLAY', true); ?>
         <div class="col-12">
             <div class="card">
                 <h4 class="card-header text-center">Thank you to our corporate and organizational partners!</h4>
-                <div class="card-body row justify-content-center"> 
+                <div class="card-body row justify-content-center">
                     <?php
                     // We're going to generate the sponsor box dynamically with php and then just insert them all 
                     // We'll use a JSON file to hold the info (see "/wp-content/uploads/tag-tree-assets/sponsor-info.json")
