@@ -1,12 +1,12 @@
 [
     {
-        "name": "Starbucks",
-        "logo": "starbucks.jpg",
-        "link": "https://en.wikipedia.org/wiki/Starbucks"
+        "name": "CMG Financial",
+        "logo": "cmg.jpg",
+        "link": "https://www.cmgfi.com/"
     },
     {
-        "name": "Route 66",
-        "logo": "route66.jpg",
-        "link": "https://en.wikipedia.org/wiki/U.S._Route_66"
+        "name": "Slalom",
+        "logo": "slalom.png",
+        "link": "https://www.slalom.com/home"
     }
 ]
