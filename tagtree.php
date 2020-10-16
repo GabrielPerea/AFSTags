@@ -173,7 +173,7 @@ define('WP_DEBUG_DISPLAY', true); ?>
                         print "<div class='col-12 col-md-4 tt-sponsor-col mb-3'>";
                         print   "<a href='$sponsorLink' rel='noopener noreferrer' target='__blank'>";
                         print       "<div class='tt-sponsor-box'>";
-                        print           "<img src='$sponsorImageLink' alt='$sponsorName' class='tt-sponsor-image'>";
+                        print           "<img src='$sponsorImageLink' alt='$sponsorName' class='tt-sponsor-image' style='object-fit:contain'>";
                         print       "</div>";
                         print   "</a>";
                         print "</div>";

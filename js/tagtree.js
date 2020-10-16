@@ -156,23 +156,23 @@ async function tagTreeMain() {
   // Add one of the three tags to the DOM
   function addTagToDOM(num, noClickOff = false) {
     // Remove any existing tag from DOM
-    if (currentTag) currentTag.remove();
-    currentTag = tagElementsActual[num];
+    if (window.currentTag) window.currentTag.remove();
+    window.currentTag = tagElementsActual[num];
     buttonRow.append(tagElementsActual[num]);
-    // Pass true to second argument to prevent setting tagAddSwitch to true
+    // Pass true to second argument to prevent setting window.tagAddSwitch to true
     // You'll want to do this if regenerating without clicking off
-    tagAddSwitch = noClickOff ? false : true;
+    window.tagAddSwitch = noClickOff ? false : true;
     // Set event listener for re-rolling the tag in place
-    tagElementsActual[num]
-      .getElementsByClassName("re-roll-button")
-      .forEach((elem) => {
-        elem.addEventListener("click", (ev) => {
-          tagElementsActual[num].remove();
-          reGenerateTagData();
-          tagElementsActual[num] = generateTag(num);
-          addTagToDOM(num, true);
-        });
+    Array.from(
+      tagElementsActual[num].getElementsByClassName("re-roll-button")
+    ).forEach((elem) => {
+      elem.addEventListener("click", (ev) => {
+        tagElementsActual[num].remove();
+        reGenerateTagData();
+        tagElementsActual[num] = generateTag(num);
+        addTagToDOM(num, true);
       });
+    });
   }
 
   for (let [htmlTag, number] of tagButtonHandles) {
@@ -188,13 +188,13 @@ async function tagTreeMain() {
   document.addEventListener("click", (ev) => {
     window.tagElementsActual = tagElementsActual; // just for testing
     if (ev && ev.target && !isTag(ev.target)) {
-      if (!currentTag || tagAddSwitch) {
-        tagAddSwitch = false;
+      if (!window.currentTag || window.tagAddSwitch) {
+        window.tagAddSwitch = false;
         return;
       }
-      let tagNum = Number(currentTag.dataset.group);
-      currentTag.remove();
-      currentTag = null;
+      let tagNum = Number(window.currentTag.dataset.group);
+      window.currentTag.remove();
+      window.currentTag = null;
       reGenerateTagData();
       tagElementsActual[tagNum] = generateTag(tagNum);
     }
