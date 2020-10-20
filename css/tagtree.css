@@ -156,6 +156,14 @@
     margin-top: -0.75em;
 }
 
+.tt-oj-sub-item {
+    padding-left: 1em;
+}
+
+.tt-oj-sub-item h4 {
+    color: #db680c;
+}
+
 /* SPONSOR SECTION */
 
 .tt-sponsor-col {

@@ -1,5 +1,3 @@
-<?php define('WP_DEBUG', true);
-define('WP_DEBUG_DISPLAY', true); ?>
 <?php /* Template Name: TagTree */ ?>
 <?php get_header(); ?>
 
@@ -97,26 +95,30 @@ define('WP_DEBUG_DISPLAY', true); ?>
                                 the tag and select another. Hitting the back-arrow will also start the tag search over.</li>
                             <li>When you see a tag with a youth’s wish you would like to fulfil, select one of the following buttons on the tag:</li>
                         </ul>
-                        <h4>Donate Money for Gift</h4>
-                        <ul>
-                            <li>On the tag, click the "Donate Money for Gift" button to make a tax-deductible contribution for the youth on your tag. You will be redirected
-                                to a secure donation page.</li>
-                            <li>Enter the youth's name in the comments section of the donation page and a caseworker will purchase and deliver the gift for you.</li>
-                            <li>You will receive a donation receipt.</li>
-                        </ul>
-                        <h4>Buy Gift</h4>
-                        <ul>
-                            <li>On the tag, click "Buy Gift."</li>
-                            <li>You will be redirected to a page where you can enter your information.</li>
-                            <li>After entering your information, you will receive a confirmation email with the youth’s gift wish. You may choose to purchase the gift
-                                or gift card from any online retailer and have it shipped to:
-                                <p class="blockquote lead font-weight-bold my-2">AFS Development Department, 401 Roland Way #150, Oakland, CA 94621</p>
-                            </li>
-                            <li>AFS caseworkers will deliver gifts to clients.</li>
-                            <li>If purchasing an online gift card, it can be sent to:
-                                <a href="mailto:info@afs4kids.org" target="_blank">info@afs4kids.org</a>.
-                                Put the youth’ s name from the tag as the recipient of the gift card. This email is secure and monitored daily.</li>
-                        </ul>
+                        <div class="tt-oj-sub-item">
+                            <h4>Donate Money for Gift</h4>
+                            <ul>
+                                <li>On the tag, click the "Donate Money for Gift" button to make a tax-deductible contribution for the youth on your tag. You will be redirected
+                                    to a secure donation page.</li>
+                                <li>Enter the youth's name in the comments section of the donation page and a caseworker will purchase and deliver the gift for you.</li>
+                                <li>You will receive a donation receipt.</li>
+                            </ul>
+                        </div>
+                        <div class="tt-oj-sub-item">
+                            <h4>Buy Gift</h4>
+                            <ul>
+                                <li>On the tag, click "Buy Gift."</li>
+                                <li>You will be redirected to a page where you can enter your information.</li>
+                                <li>After entering your information, you will receive a confirmation email with the youth’s gift wish. You may choose to purchase the gift
+                                    or gift card from any online retailer and have it shipped to:
+                                    <p class="blockquote lead font-weight-bold my-2">AFS Development Department, 401 Roland Way #150, Oakland, CA 94621</p>
+                                </li>
+                                <li>AFS caseworkers will deliver gifts to clients.</li>
+                                <li>If purchasing an online gift card, it can be sent to:
+                                    <a href="mailto:info@afs4kids.org" target="_blank">info@afs4kids.org</a>.
+                                    Put the youth’ s name from the tag as the recipient of the gift card. This email is secure and monitored daily.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
