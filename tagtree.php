@@ -85,38 +85,31 @@
                             <li>Please feel free to share the link to the Foster Joy Virtual Gift Drive for foster youth with your network and on social media.</li>
                             <li>Individuals, community organizations (churches, community groups) and businesses can participate in Foster Joy. Just share this webpage
                                 with your network!</li>
-                            <li>Questions can be emailed to <a href="mailto:info@afs4kids.org" target="_blank">info@afs4kids.org</a>.</li>
+                            <li>Questions can be emailed to Simone West, <a href="mailto:swest@afs4kids.org" target="_blank">swest@afs4kids.org</a>.</li>
                         </ul>
                         <h3>Choosing a Gift</h3>
-                        <ul>
-                            <li>Choose what age foster youth you would like to purchase a gift for.</li>
-                            <li>Click on the image of the present in your chosen age group.</li>
-                            <li>A tag with a foster youth's wish will pop-up. If you'd like to select a different tag, click "new tag" or simply click anywhere outside
-                                the tag and select another. Hitting the back-arrow will also start the tag search over.</li>
-                            <li>When you see a tag with a youth’s wish you would like to fulfil, select one of the following buttons on the tag:</li>
-                        </ul>
+                        <ol>
+                            <li>Click to choose foster youth age group.</li>
+                            <li>Click "new tag" to browse gift options. Hitting the back-arrow will also start the tag search over.</li>
+                            <li>Once you choose a foster youth's gift tag, select <em>Donate Money</em> for <em>Gift or Buy & Ship Gift</em>.</li>
+                        </ol>
                         <div class="tt-oj-sub-item">
                             <h4>Donate Money for Gift</h4>
                             <ul>
                                 <li>On the tag, click the "Donate Money for Gift" button to make a tax-deductible contribution for the youth on your tag. You will be redirected
                                     to a secure donation page.</li>
-                                <li>Enter the youth's name in the comments section of the donation page and a caseworker will purchase and deliver the gift for you.</li>
-                                <li>You will receive a donation receipt.</li>
+                                <li>Enter the youth's name in the "Notes" section of the donation page and a caseworker will purchase and deliver the gift for you.</li>
                             </ul>
+                            <a class="btn btn-danger btn-afsOrange" style="margin-left:2.75em;" href="https://app.etapestry.com/onlineforms/AlternativeFamilyServices/fosterjoy.html" target="_blank" rel="noopener noreferrer">Donate</a>
                         </div>
                         <div class="tt-oj-sub-item">
-                            <h4>Buy Gift</h4>
+                            <h4>Buy and Ship Gift</h4>
                             <ul>
-                                <li>On the tag, click "Buy Gift."</li>
                                 <li>You will be redirected to a page where you can enter your information.</li>
-                                <li>After entering your information, you will receive a confirmation email with the youth’s gift wish. You may choose to purchase the gift
-                                    or gift card from any online retailer and have it shipped to:
+                                <li>You may choose to purchase the gift from any online retailer and have it shipped to:
                                     <p class="blockquote lead font-weight-bold my-2">AFS Development Department, 401 Roland Way #150, Oakland, CA 94621</p>
                                 </li>
                                 <li>AFS caseworkers will deliver gifts to clients.</li>
-                                <li>If purchasing an online gift card, it can be sent to:
-                                    <a href="mailto:info@afs4kids.org" target="_blank">info@afs4kids.org</a>.
-                                    Put the youth’ s name from the tag as the recipient of the gift card. This email is secure and monitored daily.</li>
                             </ul>
                         </div>
                     </div>
@@ -138,7 +131,7 @@
     <div class="row mb-5">
         <div class="col-12">
             <div class="card">
-                <div class="h4 card-header text-center"><strong>Donate to the AFS Holiday Fund and AFS caseworkers will purchase and deliver gifts for youth in need of a gift.</strong></div>
+                <div class="h4 card-header text-center"><strong>Give to the AFS Holiday Fund – Foster Joy!</strong></div>
                 <div class="card-body row text-center">
                     <div class="col-12 text-center">
                         <a class="btn btn-lg btn-danger btn-afsOrange" href="https://app.etapestry.com/onlineforms/AlternativeFamilyServices/fosterjoy.html" rel="noopener noreferrer">Donate</a>
