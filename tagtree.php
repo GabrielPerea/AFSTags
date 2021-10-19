@@ -52,7 +52,7 @@
     </div>
 
     <!-- Tag select row -->
-    <div class="row mb-5 mt-5">
+    <div class="row mt-5">
         <div class="col-12">
             <div>
                 <!-- Buttons -->
@@ -90,7 +90,12 @@
                     </div>
                 </div>
                 <!-- /Choosing a Tag -->
-
+            </div>
+        </div>
+    </div>
+    <div class="row mb-5" style="background-color:#F1F1F1;">
+        <div class="col-12">
+            <div>
                 <!-- Donate or Buy & Ship -->
                 <div class="row justify-content-around mt-5">
                     <div class="col-5" style="background-color:#E2E2E2;">
