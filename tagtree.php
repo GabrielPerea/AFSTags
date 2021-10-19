@@ -20,9 +20,10 @@
 <div class="container mt-2" style="position: relative;">
     <!-- Header row with hero image -->
     <div class="row">
-        <div class="col-12 col-lg-6 order-lg-1 order-2 text-center">
+        <div class="col-12 tt-hero-container" style="position:relative;text-align:center;color:white">
             <picture>
-                <img class="img-fluid rounded mx-auto" style="object-fit:cover;max-height:274px;" sizes="(max-width: 1400px) 100vw, 1400px" srcset="<?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_200.jpg 200w,
+                <img class="img-fluid" style="object-fit:cover;" <?php /* sizes="(max-width: 1400px) 100vw, 1400px" */ ?> <?php /*srcset="
+                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_200.jpg 200w,
                             <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_368.jpg 368w,
                             <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_499.jpg 499w,
                             <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_614.jpg 614w,
@@ -36,23 +37,26 @@
                             <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1283.jpg 1283w,
                             <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1350.jpg 1350w,
                             <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1389.jpg 1389w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1400.jpg 1400w" src="<?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1400.jpg" alt="Excited gift recipient">
+                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1400.jpg 1400w" 
+                            */ ?> src="<?php print content_url('uploads/tag-tree-assets/images/'); ?>tagtree-hero-2021.jpg" alt="Excited gift recipient">
             </picture>
-        </div>
-        <div class="col-12 col-lg-6 order-lg-2 order-1">
-            <div class="jumbotron">
-                <h1 class="display-4 text-uppercase">Foster Joy</h1>
-                <p class="lead">A virtual gift drive to ensure foster youth receive a gift this holiday season.</p>
-            </div>
+            <h1 class="tt-hero-text-container row text-white" style="width:500px;position:absolute;right:5%;bottom:40%;">
+                <span class="col-12 display-4 w-full">Alternative Family Services</span>
+                <span class="col-12 display-2 w-full">Virtual Gift Drive</span>
+            </h1>
+            <p class="tt-hero-tagline" style="width:400px;position:absolute;right:2.5%;bottom:5%;">
+                <span>A virtual gift drive to ensure youth in care</span> </br>
+                <span>receive a gift this holiday season.</span>
+            </p>
         </div>
     </div>
 
     <!-- Tag select row -->
-    <div class="row mb-5">
+    <div class="row mb-5 mt-5">
         <div class="col-12">
-            <div class="card">
-                <h5 class="card-header text-center">Choose an age group to donate</h5>
-                <div class="card-body row" id="button-row">
+            <div>
+                <!-- Buttons -->
+                <div class="row" id="button-row">
                     <div class="col-4 text-center" id="age-group-container-1">
                         <button id="age-group-button-1" class="mx-auto">
                             <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-stars.jpg'); ?>" alt="Present for 0-6">
@@ -72,71 +76,60 @@
                         </button class="button">
                     </div>
                 </div>
-                <div class="carbody row">
-                    <div class="col-12">
-                        <hr class="mx-4">
-                    </div>
-                </div>
-                <div class="card-body row">
-                    <div class="col-12">
-                        <h2>Foster Joy Virtual Gift Drive</h2>
+                <!-- /Buttons -->
+
+                <!-- Choosing a Tag (Purple Box) -->
+                <div class="row justify-content-center">
+                    <div class="col-11 mt-5" style="background-color:#E9DFFF;">
+                        <h2>Choosing a Tag</h2>
                         <ul>
-                            <li>There is no limit to how many tags you can fulfill.</li>
-                            <li>Please feel free to share the link to the Foster Joy Virtual Gift Drive for foster youth with your network and on social media.</li>
-                            <li>Individuals, community organizations (churches, community groups) and businesses can participate in Foster Joy. Just share this webpage
-                                with your network!</li>
-                            <li>Questions can be emailed to Simone West, <a href="mailto:swest@afs4kids.org" target="_blank">swest@afs4kids.org</a>.</li>
+                            <li>Click on the image of your chosen age group to buy a gift</li>
+                            <li>Click "new tag" to brows gift options. Hitting the back-arrow will also start the tag search over.</li>
+                            <li>Once you choose a foster youth's gift tag, select <span class="font-italic">Donate Money for Gift</span> or <span class="font-italic">Buy & Ship Gift</span>.</li>
                         </ul>
-                        <h3>Choosing a Gift</h3>
-                        <ol>
-                            <li>Click to choose foster youth age group.</li>
-                            <li>Click "new tag" to browse gift options. Hitting the back-arrow will also start the tag search over.</li>
-                            <li>Once you choose a foster youth's gift tag, select <em>Donate Money</em> for <em>Gift or Buy & Ship Gift</em>.</li>
-                        </ol>
-                        <div class="tt-oj-sub-item">
-                            <h4>Donate Money for Gift</h4>
-                            <ul>
-                                <li>On the tag, click the "Donate Money for Gift" button to make a tax-deductible contribution for the youth on your tag. You will be redirected
-                                    to a secure donation page.</li>
-                                <li>Enter the youth's name in the "Notes" section of the donation page and a caseworker will purchase and deliver the gift for you.</li>
-                            </ul>
-                            <a class="btn btn-danger btn-afsOrange" style="margin-left:2.75em;" href="https://app.etapestry.com/onlineforms/AlternativeFamilyServices/fosterjoy.html" target="_blank" rel="noopener noreferrer">Donate</a>
-                        </div>
-                        <div class="tt-oj-sub-item">
-                            <h4>Buy and Ship Gift</h4>
-                            <ul>
-                                <li>You will be redirected to a page where you can enter your information.</li>
-                                <li>You may choose to purchase the gift from any online retailer and have it shipped to:
-                                    <p class="blockquote lead font-weight-bold my-2">AFS Development Department, 401 Roland Way #150, Oakland, CA 94621</p>
-                                </li>
-                                <li>AFS caseworkers will deliver gifts to clients.</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <!-- /Choosing a Tag -->
 
-
-
-    <!-- OR -->
-    <div class="row">
-        <div class="col-12 text-center">
-            <h1 class="text-center tt-or">OR</h1>
-        </div>
-    </div>
-
-    <!-- Donate row -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card">
-                <div class="h4 card-header text-center"><strong>Give to the AFS Holiday Fund – Foster Joy!</strong></div>
-                <div class="card-body row text-center">
-                    <div class="col-12 text-center">
-                        <a class="btn btn-lg btn-danger btn-afsOrange" href="https://app.etapestry.com/onlineforms/AlternativeFamilyServices/fosterjoy.html" rel="noopener noreferrer">Donate</a>
+                <!-- Donate or Buy & Ship -->
+                <div class="row justify-content-around mt-5">
+                    <div class="col-5" style="background-color:#E2E2E2;">
+                        <h3>Donate Money for Gift</h3>
+                        <ul>
+                            <li>On the tag, click "Donate Money for Gift"</li>
+                            <li>You'll be redirected to a secure donation page</li>
+                            <li>Enter the youth's name in the "Foster Youth Name" section at checkout</li>
+                        </ul>
+                    </div>
+                    <div class="col-5" style="background-color:#E2E2E2;">
+                        <h3>Buy and Ship Gift</h3>
+                        <ul>
+                            <li>You'll be redirected to a page to enter your information</li>
+                            <li>
+                                Purchase a gift from any online retailer (include youth's name on gift receipt) and ship to:</br>
+                                <span class="">
+                                    AFS Development Department, 401 Roland Way</br>
+                                    Oakland, CA 94621
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                <!-- /Donate or Buy & Ship -->
+
+                <!-- Overview -->
+                <div class="row justify-content-center mt-5">
+                    <div class="col-11 ">
+                        <h2>Overview</h2>
+                        <ul>
+                            <li>Individuals, businesses, and community organizations may participate in the virtual holiday gift drive.</li>
+                            <li>There is no limit to how many tags can be adopted.</li>
+                            <li>Please share this page’s link via your networks and on social media.</li>
+                            <li>Questions can be emailed to Simone West, <a href="mailto:swest@afs4kids.org">swest@afs4kids.org</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /Overview -->
             </div>
         </div>
     </div>
