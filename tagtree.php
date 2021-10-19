@@ -51,29 +51,26 @@
         </div>
     </div>
 
-    <!-- Tag select row -->
+    <!-- Main Body -->
     <div class="row mt-5">
         <div class="col-12">
             <div>
                 <!-- Buttons -->
                 <div class="row" id="button-row">
                     <div class="col-4 text-center" id="age-group-container-1">
-                        <button id="age-group-button-1" class="mx-auto">
-                            <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-stars.jpg'); ?>" alt="Present for 0-6">
-                            <div class="tt-button-label">Age 0-6</div>
-                        </button class="button">
+                        <button id="age-group-button-1" class="mx-auto" style="background:none;border:none;">
+                            <img class="img-fluid" style="object-fit:cover;max-height:139px;border:none;" src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/0-6-button.png'); ?>" alt="Present for 0-6">
+                        </button>
                     </div>
                     <div class="col-4 text-center" id="age-group-container-2">
-                        <button id="age-group-button-2" class="mx-auto">
-                            <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-dots.jpg'); ?>" alt="Present for 7-12">
-                            <div class="tt-button-label">Age 7-12</div>
-                        </button class="button">
+                        <button id="age-group-button-2" class="mx-auto" style="background:none;border:none;">
+                            <img class="img-fluid" style="object-fit:cover;max-height:139px;border:none;" src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/7-12-button.png'); ?>" alt="Present for 7-12">
+                        </button>
                     </div>
                     <div class="col-4 text-center" id="age-group-container-3">
-                        <button id="age-group-button-3" class="mx-auto">
-                            <img class="img-fluid img-thumbnail" style="object-fit:cover;max-height:100px;" src="<?php print content_url('uploads/tag-tree-assets/images/present-plain.jpg'); ?>" alt="Present for 13-18">
-                            <div class="tt-button-label">Age 13-18</div>
-                        </button class="button">
+                        <button id="age-group-button-3" class="mx-auto" style="background:none;border:none;">
+                            <img class="img-fluid" style="object-fit:cover;max-height:139px;border:none;" src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/13-18-button.png'); ?>" alt="Present for 13-18">
+                        </button>
                     </div>
                 </div>
                 <!-- /Buttons -->
