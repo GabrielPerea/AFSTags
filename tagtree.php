@@ -20,7 +20,7 @@
 <div class="container mt-2" style="position: relative;">
     <!-- Header row with hero image -->
     <div class="row">
-        <div class="col-12 tt-hero-container" style="position:relative;text-align:center;color:white">
+        <div class="col-12 tt-hero-container text-white">
             <picture>
                 <img class="img-fluid" style="object-fit:cover;" <?php /* sizes="(max-width: 1400px) 100vw, 1400px" */ ?> <?php /*srcset="
                             <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_200.jpg 200w,
@@ -40,11 +40,11 @@
                             <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1400.jpg 1400w" 
                             */ ?> src="<?php print content_url('uploads/tag-tree-assets/images/'); ?>tagtree-hero-2021.jpg" alt="Excited gift recipient">
             </picture>
-            <h1 class="tt-hero-text-container row text-white" style="width:500px;position:absolute;right:5%;bottom:40%;">
+            <h1 class="tt-hero-text-container row text-white">
                 <span class="col-12 display-4 w-full">Alternative Family Services</span>
                 <span class="col-12 display-2 w-full">Virtual Gift Drive</span>
             </h1>
-            <p class="tt-hero-tagline" style="width:400px;position:absolute;right:2.5%;bottom:5%;">
+            <p class="tt-hero-tagline">
                 <span>A virtual gift drive to ensure youth in care</span> </br>
                 <span>receive a gift this holiday season.</span>
             </p>
@@ -58,18 +58,18 @@
                 <!-- Buttons -->
                 <div class="row" id="button-row">
                     <div class="col-4 text-center" id="age-group-container-1">
-                        <button id="age-group-button-1" class="mx-auto" style="background:none;border:none;">
-                            <img class="img-fluid" style="object-fit:cover;max-height:139px;border:none;" src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/0-6-button.png'); ?>" alt="Present for 0-6">
+                        <button id="age-group-button-1" class="mx-auto border-0 tt-button">
+                            <img class="img-fluid tt-button-image"  src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/0-6-button.png'); ?>" alt="Present for 0-6">
                         </button>
                     </div>
                     <div class="col-4 text-center" id="age-group-container-2">
-                        <button id="age-group-button-2" class="mx-auto" style="background:none;border:none;">
-                            <img class="img-fluid" style="object-fit:cover;max-height:139px;border:none;" src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/7-12-button.png'); ?>" alt="Present for 7-12">
+                        <button id="age-group-button-2" class="mx-auto border-0 tt-button">
+                            <img class="img-fluid tt-button-image"  src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/7-12-button.png'); ?>" alt="Present for 7-12">
                         </button>
                     </div>
                     <div class="col-4 text-center" id="age-group-container-3">
-                        <button id="age-group-button-3" class="mx-auto" style="background:none;border:none;">
-                            <img class="img-fluid" style="object-fit:cover;max-height:139px;border:none;" src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/13-18-button.png'); ?>" alt="Present for 13-18">
+                        <button id="age-group-button-3" class="mx-auto border-0 tt-button">
+                            <img class="img-fluid tt-button-image"  src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/13-18-button.png'); ?>" alt="Present for 13-18">
                         </button>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
 
                 <!-- Choosing a Tag (Purple Box) -->
                 <div class="row justify-content-center">
-                    <div class="col-11 mt-5" style="background-color:#E9DFFF;">
+                    <div class="col-11 mt-5 tt-bg-purple">
                         <h2>Choosing a Tag</h2>
                         <ul>
                             <li>Click on the image of your chosen age group to buy a gift</li>
@@ -90,12 +90,12 @@
             </div>
         </div>
     </div>
-    <div class="row mb-5" style="background-color:#F1F1F1;">
+    <div class="row mb-5 tt-bg-lightgray">
         <div class="col-12">
             <div>
                 <!-- Donate or Buy & Ship -->
                 <div class="row justify-content-around mt-5">
-                    <div class="col-5" style="background-color:#E2E2E2;">
+                    <div class="col-12 col-md-5 tt-bg-darkgray"> 
                         <h3>Donate Money for Gift</h3>
                         <ul>
                             <li>On the tag, click "Donate Money for Gift"</li>
@@ -103,7 +103,7 @@
                             <li>Enter the youth's name in the "Foster Youth Name" section at checkout</li>
                         </ul>
                     </div>
-                    <div class="col-5" style="background-color:#E2E2E2;">
+                    <div class="col-12 col-md-5 tt-bg-darkgray">
                         <h3>Buy and Ship Gift</h3>
                         <ul>
                             <li>You'll be redirected to a page to enter your information</li>
