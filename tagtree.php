@@ -129,6 +129,7 @@
     </div>
 
     <!-- Sponsors -->
+    <?php /*
     <div id="sponsors-row" class="row mb-4">
         <div class="col-12">
             <div class="card">
@@ -166,27 +167,7 @@
         </div>
 
     </div>
+    */ ?>
 
     <?php get_footer(); ?>
 
-
-
-    <?php
-    /*
-// List of toys
-// Each toy name should exactly correspond with an existing image
-$toyList = array("truck", "rocking_horse", "doll");
-$toy = $toyList[rand(0, count($toyList) - 1)];
-$toyPicturesFolder = ;
-$toySrc = $toyPicturesFolder . $toy . ".jpg";
-
-// List of names with genders
-$nameGenderPairs = file_get_contents(content_url('uploads/tag-tree-assets/humanChildren.json'));
-$realHumanChildren = json_decode($nameGenderPairs);
-$randomNumber = rand(0, count($realHumanChildren) - 1);
-$name = $realHumanChildren[$randomNumber][0];
-$gender = strcmp($realHumanChildren[$randomNumber][1], 'm') == 0 ? 'Boy' : "Girl";
-$pronoun = strcmp($gender, 'Boy') == 0 ? 'him' : 'her';
-$printableToy = str_replace("_", " ", $toy);
-*/
-    ?>
