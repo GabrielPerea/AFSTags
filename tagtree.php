@@ -22,23 +22,15 @@
     <div class="row">
         <div class="col-12 tt-hero-container text-white">
             <picture>
-                <img class="img-fluid" style="object-fit:cover;" <?php /* sizes="(max-width: 1400px) 100vw, 1400px" */ ?> <?php /*srcset="
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_200.jpg 200w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_368.jpg 368w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_499.jpg 499w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_614.jpg 614w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_714.jpg 714w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_803.jpg 803w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_904.jpg 904w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_982.jpg 982w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1061.jpg 1061w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1135.jpg 1135w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1214.jpg 1214w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1283.jpg 1283w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1350.jpg 1350w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1389.jpg 1389w,
-                            <?php print content_url('uploads/tag-tree-assets/images/tagtree-hero/'); ?>tagtree-hero_tbdgpi_c_scale,w_1400.jpg 1400w" 
-                            */ ?> src="<?php print content_url('uploads/tag-tree-assets/images/'); ?>tagtree-hero-2021.jpg" alt="Excited gift recipient">
+                <img class="img-fluid" style="object-fit:cover;" sizes="(max-width: 1920px) 100vw, 1920px" srcset="
+                            <?php print content_url('uploads/tag-tree-assets/images/tag-tree-hero-2021/'); ?>tagtree-hero-2021_i1lppw_c_scale,w_100.jpg 100w,
+                            <?php print content_url('uploads/tag-tree-assets/images/tag-tree-hero-2021/'); ?>tagtree-hero-2021_i1lppw_c_scale,w_586.jpg 586w,
+                            <?php print content_url('uploads/tag-tree-assets/images/tag-tree-hero-2021/'); ?>tagtree-hero-2021_i1lppw_c_scale,w_879.jpg 879w,
+                            <?php print content_url('uploads/tag-tree-assets/images/tag-tree-hero-2021/'); ?>tagtree-hero-2021_i1lppw_c_scale,w_1125.jpg 1125w,
+                            <?php print content_url('uploads/tag-tree-assets/images/tag-tree-hero-2021/'); ?>tagtree-hero-2021_i1lppw_c_scale,w_1344.jpg 1344w,
+                            <?php print content_url('uploads/tag-tree-assets/images/tag-tree-hero-2021/'); ?>tagtree-hero-2021_i1lppw_c_scale,w_1541.jpg 1541w,
+                            <?php print content_url('uploads/tag-tree-assets/images/tag-tree-hero-2021/'); ?>tagtree-hero-2021_i1lppw_c_scale,w_1734.jpg 1734w,
+                            <?php print content_url('uploads/tag-tree-assets/images/tag-tree-hero-2021/'); ?>tagtree-hero-2021_i1lppw_c_scale,w_1920.jpg 1920w" src="<?php print content_url('uploads/tag-tree-assets/images/tag-tree-hero-2021/'); ?>tagtree-hero-2021_i1lppw_c_scale,w_1920.jpg" alt="Excited gift recipient">
             </picture>
             <h1 class="tt-hero-text-container row text-white">
                 <span class="col-12 display-4 w-full">Alternative Family Services</span>
@@ -59,17 +51,17 @@
                 <div class="row" id="button-row">
                     <div class="col-4 text-center" id="age-group-container-1">
                         <button id="age-group-button-1" class="mx-auto border-0 tt-button">
-                            <img class="img-fluid tt-button-image"  src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/0-6-button.png'); ?>" alt="Present for 0-6">
+                            <img class="img-fluid tt-button-image" src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/0-6-button.png'); ?>" alt="Present for 0-6">
                         </button>
                     </div>
                     <div class="col-4 text-center" id="age-group-container-2">
                         <button id="age-group-button-2" class="mx-auto border-0 tt-button">
-                            <img class="img-fluid tt-button-image"  src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/7-12-button.png'); ?>" alt="Present for 7-12">
+                            <img class="img-fluid tt-button-image" src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/7-12-button.png'); ?>" alt="Present for 7-12">
                         </button>
                     </div>
                     <div class="col-4 text-center" id="age-group-container-3">
                         <button id="age-group-button-3" class="mx-auto border-0 tt-button">
-                            <img class="img-fluid tt-button-image"  src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/13-18-button.png'); ?>" alt="Present for 13-18">
+                            <img class="img-fluid tt-button-image" src="<?php print content_url('uploads/tag-tree-assets/images/gift-buttons-full/13-18-button.png'); ?>" alt="Present for 13-18">
                         </button>
                     </div>
                 </div>
@@ -95,7 +87,7 @@
             <div>
                 <!-- Donate or Buy & Ship -->
                 <div class="row justify-content-around mt-5">
-                    <div class="col-12 col-md-5 tt-bg-darkgray"> 
+                    <div class="col-12 col-md-5 tt-bg-darkgray">
                         <h3>Donate Money for Gift</h3>
                         <ul>
                             <li>On the tag, click "Donate Money for Gift"</li>
