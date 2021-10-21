@@ -124,6 +124,22 @@
                     </div>
                 </div>
                 <!-- /Overview -->
+                <!-- $50k Match -->
+                <div class="row justify-content-center mt-5">
+                    <div class="col-12 col-md-11 tt-bg-darkgray pb-4 mb-5">
+                        <h2 class="w-full text-center display-4"><strong>$50K Match</h2></strong>
+                        <p class="w-full text-center h3 mt-0">
+                            <strong>Donate now and double your impact!</strong>
+                        </p>
+                        <p class="w-full text-center">
+                            Every dollar you donate will be matched (up to $50K) by a generous corporate donor.
+                        </p>
+                        <a href="https://alternativefamilyservices.humanitru.com/donate?page=foster-joy-2020&amount=50&options=100%2C75%2C50%2C25&tribute=true&ach=true&address=optional" target="_blank" class="button btn fl-button align-self-center mx-auto" style="width:100px;display:block;">
+                            Donate
+                        </a>
+                    </div>
+                </div>
+                <!-- /$50k Match -->
             </div>
         </div>
     </div>
@@ -170,4 +186,3 @@
     */ ?>
 
     <?php get_footer(); ?>
-
