@@ -75,6 +75,7 @@
                             <li>Click on the image of your chosen age group to buy a gift</li>
                             <li>Click "new tag" to brows gift options. Hitting the back-arrow will also start the tag search over.</li>
                             <li>Once you choose a foster youth's gift tag, select <span class="font-italic">Donate Money for Gift</span> or <span class="font-italic">Buy & Ship Gift</span>.</li>
+                            <li>This year is expected to have severe shipping delays due to supply chain issues. Please plan to participate early to make sure foster kids receive gifts by the holidays!</li>
                         </ul>
                     </div>
                 </div>
@@ -119,7 +120,8 @@
                             <li>Individuals, businesses, and community organizations may participate in the virtual holiday gift drive.</li>
                             <li>There is no limit to how many tags can be adopted.</li>
                             <li>Please share this page’s link via your networks and on social media.</li>
-                            <li>Questions can be emailed to Simone West, <a href="mailto:swest@afs4kids.org">swest@afs4kids.org</a></li>
+                            <li>Ensure youth with curly/kinky hair have the products they need for equitable care: <a href="https://www.afs4kids.org/wp-content/uploads/2021/07/AFS-Hair-Care-Kits.pdf" target="_blank">click here for examples</a></li>
+                            <li>Questions can be emailed to Simone West, <a href="mailto:swest@afs4kids.org">swest@afs4kids.org</a>, 510.338.7769.</li>
                         </ul>
                     </div>
                 </div>
@@ -127,12 +129,12 @@
                 <!-- $50k Match -->
                 <div class="row justify-content-center mt-5">
                     <div class="col-12 col-md-11 tt-bg-darkgray pb-4 mb-5">
-                        <h2 class="w-full text-center display-4"><strong>$50K Match</h2></strong>
+                        <h2 class="w-full text-center display-4"><strong>$50,000 Match</h2></strong>
                         <p class="w-full text-center h3 mt-0">
                             <strong>Donate now and double your impact!</strong>
                         </p>
                         <p class="w-full text-center">
-                            Every dollar you donate will be matched (up to $50K) by a generous corporate donor.
+                            Every dollar you donate will be matched (up to $50,000) by a generous corporate donor.
                         </p>
                         <a href="https://alternativefamilyservices.humanitru.com/donate?page=foster-joy-2020&amount=50&options=100%2C75%2C50%2C25&tribute=true&ach=true&address=optional" target="_blank" class="button btn fl-button align-self-center mx-auto" style="width:100px;display:block;">
                             Donate
